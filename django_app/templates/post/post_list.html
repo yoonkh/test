@@ -1,0 +1,16 @@
+{% extends 'common/base.html' %}
+
+{% block content %}
+    <h1><a href="{% url 'post_detail' post_pk=post.pk %}">{{ post.title }}</a></h1>
+
+    {% for post in posts %}
+        <h1>안녕</h1>
+        {{ posts.author }}
+        {{ posts.comment }}
+        <a href="{% url 'post_delete' post_pk=post.pk">삭제</a>
+    {% endfor %}
+
+
+
+
+{% endblock %}

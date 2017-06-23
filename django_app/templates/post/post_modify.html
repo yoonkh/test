@@ -1,0 +1,9 @@
+{% extends 'common/base.html' %}
+
+{% block content %}
+    <h1>New post</h1>
+    <form method="POST">{% csrf_token %} <!-- 폼 보안을 위함 -->
+        {{ form.as_p }} <!-- 폼을 보여준다 -->
+        <button type="submit">Save</button>
+    </form>
+{% endblock %}
